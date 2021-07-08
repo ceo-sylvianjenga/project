@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive website</title>
     <link rel="stylesheet" href="fonts/font-awesome.css">
+    <script src="https://kit.fontawesome.com/f943ecf26e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="ask-me/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/google-fonts.css">
     <link rel="stylesheet" href="ask-me/css/style.css">
@@ -25,7 +26,7 @@
         <li><a href="#contact">contact</a></li>
     </ul>
 </nav>
-<div> <i class="fas fa-hamburger"></i></div>
+  <div class="fas fa-hamburger"></div>
 
 <a href="#" class="logo"><img src="ask-me/images/sp.jpg" alt=""></a>
 
@@ -35,10 +36,79 @@
 <!-- home section starts -->
 
 <section id="home" class="container-fluid">
+<div class="row min-vh-100 align-items-center">
+
+    <div class="col-md-8 ml-md-5 text-md-left text-center content">
+        <h1>Food that you can't resist</h1>
+        <h2>enjoy the marvelous taste</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero saepe sint aliquam eius sequi esse ea ullam dolores exercitationem accusantium iusto sed, ex sunt quo, in dicta, eaque quos ab!
+        </p>
+        <a href="#special"><button>Get started</button></a>
+    </div>
+
+<div class="video-container">
+    <video src="ask-me/images/vid5.mp4" autoplay loop class="vid vid5"></video>
+    <video src="ask-me/images/vid 8.mp4.crdownload" autoplay loop class="vid vid8"></video>
+    <video src="ask-me/images/vid3.mp4.crdownload" autoplay loop class="vid vid3"></video>
+</div>
+<div class="controls">
+    <div class="dots dot1"></div>
+    <div class="dots dot2"></div>
+    <div class="dots dot3"></div>
+</div>
+
+
+</div>
 
 </section>
 
 <!-- home section ends -->
+
+<!-- special section starts -->
+
+<!-- special section ends -->
+
+
+
+
+<!-- script part starts -->
+
+<script>
+$(document).ready(function(){
+$('.fa-hamburger').click(function(){
+$(this).toggleClass('fa-times');
+$('nav').toggleClass('nav-toggle');
+});
+$('nav ul li a').click(function(){
+    $('.fa-hamburger').removeClass('fa-times');
+    $('nav').removeClass('nav-toggle');
+});
+
+$('.dot1').click(function(){
+    $('.vid5').css('display','block');
+    $('.vid8').css('display','none');
+    $('.vid3').css('display','none');
+   
+})
+$('.dot2').click(function(){
+    $('.vid8').css('display','block');
+    $('.vid5').css('display','none');
+    $('.vid3').css('display','none');
+   
+})
+$('.dot3').click(function(){
+    $('.vid3').css('display','block');
+    $('.vid8').css('display','none');
+    $('.vid5').css('display','none');
+   
+})
+
+
+
+});
+
+
+</script>
 
 
 </body>

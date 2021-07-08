@@ -1,4 +1,31 @@
-$yellow: #FFF200;
+   @mixin button {
+    outline:none;
+    border:none;
+    border-radius: 5rem;
+    color:#333;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+    ::before{
+        content: '';
+        position: absolute;
+        top:0; left:0;
+        background: yellow;
+        height:100%;
+        width:0%;
+        transition:.2s;
+        z-index: -1;
+    }
+    button:hover::before{
+        width:100%;
+
+    }
 
 *{
     margin: 0;padding: 0;
@@ -63,9 +90,105 @@ nav ul{
             
   #home{
       background: linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.6));
-      min-height: 100vh;
-  }      
+      position: relative;
+      
+  } 
+  #home .content h1{
+    font-size: 5rem;
+    font-family: 'lemonada',sans-serif;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .3rem #333;
+    color: yellow;
+  }
+  
+  #home .content h2{
+    font-size: 3.5rem;
+    font-family: 'lemonada',sans-serif;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .3rem #333;
+    color: #fff;
+    margin: 1rem 0;
+  }
+  p{
+      font-size: 1.6rem;
+      color: #ccc;
+  }
+  button{
+      @include button();
+      height:4rem;
+      width: 14rem;
+      background: #fff;
+  }
 
-    
+  .fa-times{
+      transform: skew(-180deg) rotate(-180deg);
+  }
+  
+  /* media queries */
+
+  @media (max-width:768px){
+      html{
+          font-size: 50%;
+      }
+  }
+      .header{}
+      .fa-hamburger{
+              display: block;
+          }
+          nav{
+              position: fixed;
+              top: 0;left:-120%;
+              height: 100vh;
+              width: 35rem;
+              background: #000;
+            opacity: .8;
+            }
+.nav-toggle{
+    left: -0%;
+}
+              ul{
+                  flex-flow: column;
+                  justify-content: center;
+                  height: 100%;
+              }
+      li{
+          margin: 2rem 0;
+      }
+      a{
+          font-size: 3.5rem;
+          border-radius: 5rem;
+      }
+      a:hover{
+          padding: .5rem 7.5rem;
+          color: #333;
+          background:yellow;
+      }
+  
+.video-container{
+    position: absolute;
+    top: 0;left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
 
 
+.vid1{
+display: block;
+}
+.controls{
+    position: absolute;
+    bottom: 14%;left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.dots{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    background: yellow;
+    margin: 0 1rem;
+}
+.dots:hover{
+    background: #fff;
+}
