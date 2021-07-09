@@ -430,3 +430,46 @@ font-size: 2rem;
     color:yellow;
 }
 
+#footer{
+    background-color: #333;
+}
+#footer h1{
+    font-size: 2rem;
+    margin: 0;
+    padding: 2rem 0;
+    text-align: center;
+    color: #fff;
+}
+footer ul.social li{
+    display: inline-block !important;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    border: 2px solid gold;
+    border-radius: 40%;
+    text-align: center;
+}
+footer ul li a i{
+    position: relative;
+    margin:10px 10px;
+}
+.facebook{
+    color: #3b5998;
+}  
+.twitter{
+    color: #38a1f3;
+}
+.instagram{
+    color: #e1306c;
+}
+.plus{
+    color: #db4a39;
+}
+.youtube{
+    color: rgba(196, 29, 29, 0.87);
+}
+footer ul li:hover{
+    border-radius: 50%;
+    margin-right: 10px;
+}
