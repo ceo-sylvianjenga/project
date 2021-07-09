@@ -73,10 +73,13 @@ body{
         cursor :pointer;
         display :none;
     }
-
-
 .logo img{
-    height: 5rem;
+    height: 3rem;
+}
+
+ .frlogo img{
+    height: 50vh;
+    width: 100% !important;
 }
     
 
@@ -139,7 +142,7 @@ nav ul{
       width: 14rem;
       background: #fff;
   }
-//about section
+/* about section */
 
 #about .heading h1{
         @include heading();
@@ -157,13 +160,13 @@ nav ul{
     background: #333;
     color: #fff;
 }
-&:hover{
+#about .content button:hover{
     color: #333;
 }
 #about .image img{
     width: 30vw;
 }
-//dish section
+/* dish section */
 #dishes{
     min-height: 100vh;
     width: 100vw;
@@ -207,7 +210,7 @@ nav ul{
     justify-content: center;
     flex-flow: column;
     color: #fff;
-    /* transform: scale(0); */
+    transform: scale(1);
 }
 .info h3{
     font-size: 3rem;
@@ -223,10 +226,10 @@ nav ul{
     height: 4rem;
     width: 14rem;
 }
-&:hover .info{
+.info:hover{
     transform: scale(1);
 }
-//contact section
+/* contact section */
 #contact{
     min-height: 100vh;
     width: 100vw;
@@ -239,13 +242,14 @@ nav ul{
 #contact form{
     background: #fff;
     padding-top: 2rem;
-    margin: 1rem 2rem;
+    margin: 1rem auto;
     border-radius: 1rem;
     box-shadow: 0 0 2rem #333;
 }
 .inputBox{
     position: relative;
     text-align: center;
+    font-size: 15px;
 }
 .inputBox input,textarea{
     outline: none;
@@ -417,12 +421,12 @@ font-size: 2rem;
 }
 .card button{
     @include button();
-    height: 3.5rem;
+    height:  auto;
     width: 14rem;
     background: #333;
     color: #fff;
 }
 .card button:hover{
-    color: #333;
+    color:yellow;
 }
 
